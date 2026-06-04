@@ -1,5 +1,4 @@
 package multi_threaded_application;
-
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -15,7 +14,7 @@ public class DownloadSimulator {
         executor = Executors.newFixedThreadPool(threadPoolSize);
     }
 
-    // Simulate File Download
+    // Simulate File Download   
     public Future<String> downloadFile(String fileName) {
 
         return executor.submit(() -> {
@@ -67,3 +66,4 @@ public class DownloadSimulator {
         simulator.shutdown();
     }
 }
+
