@@ -1,0 +1,50 @@
+package com.demo;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+/**
+ * Servlet implementation class HelloServlet
+ */
+@WebServlet("/HelloServlet")
+public class HelloServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public HelloServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		response.setContentType("text/html");
+
+        // Get the PrintWriter object to write the response output
+        PrintWriter out = response.getWriter();
+
+        // Write a simple HTML page as the response
+        out.println("<html>");
+        out.println("<head><title>Hello Servlet</title></head>");
+        out.println("<body>");
+        out.println("<h1 align = center style = 'color:blue;' >Hello, World! This is a simple servlet.</h1>");
+        out.println("</body>");
+        out.println("</html>");
+
+        // Close the PrintWriter
+        out.close();
+	}
+
+}

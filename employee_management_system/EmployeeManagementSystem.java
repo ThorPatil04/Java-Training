@@ -1,6 +1,7 @@
 import java.sql.*;
 import java.util.Scanner;
 
+
 public class EmployeeManagementSystem {
 
     static final String URL =
